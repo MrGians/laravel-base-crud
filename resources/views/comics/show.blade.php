@@ -13,7 +13,7 @@
             <!-- Comic Cover -->
             <figure class="comic-cover">
               <span class="top-label">{{ $comic->type }}</span>
-              <img src="{{ $comic->thumb }}" alt="{{ $comic->series }}">
+              <img src="{{ $comic->thumb ? $comic->thumb : asset('img/thumb-placeholder.png') }}" alt="{{ $comic->series }}">
               <span class="bottom-label">View Gallery</span>
             </figure>
             <!-- Title -->

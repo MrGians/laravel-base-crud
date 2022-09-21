@@ -11,7 +11,7 @@
         <div class="col card">
           <a href="{{ route('comics.show', $serie->id) }}">
             <figure>
-              <img src="{{ $serie->thumb }}" alt="{{ $serie->series }}" />
+              <img src="{{ $serie->thumb ? $serie->thumb : asset('img/thumb-placeholder.png') }}" alt="{{ $serie->series }}" />
               <figcaption>{{ $serie->series }}</figcaption>
             </figure>
           </a>
