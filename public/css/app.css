@@ -332,41 +332,30 @@ a {
 #single-serie .additional-info .row .col {
   width: 100%;
 }
-#single-serie .additional-info .talent h4,
 #single-serie .additional-info .specs h4 {
   margin-bottom: 1rem;
 }
-#single-serie .additional-info .artist,
-#single-serie .additional-info .writers,
 #single-serie .additional-info .type,
 #single-serie .additional-info .price,
 #single-serie .additional-info .sale-date {
   display: flex;
   padding: 0.5rem 0;
 }
-#single-serie .additional-info .artist h6,
-#single-serie .additional-info .writers h6,
 #single-serie .additional-info .type h6,
 #single-serie .additional-info .price h6,
 #single-serie .additional-info .sale-date h6 {
   flex-shrink: 0;
 }
-#single-serie .additional-info .artist h6:first-child,
-#single-serie .additional-info .writers h6:first-child,
 #single-serie .additional-info .type h6:first-child,
 #single-serie .additional-info .price h6:first-child,
 #single-serie .additional-info .sale-date h6:first-child {
   width: 35%;
 }
-#single-serie .additional-info .artist p,
-#single-serie .additional-info .writers p,
 #single-serie .additional-info .type p,
 #single-serie .additional-info .price p,
 #single-serie .additional-info .sale-date p {
   line-height: 0.8rem;
 }
-#single-serie .additional-info .artist span,
-#single-serie .additional-info .writers span,
 #single-serie .additional-info .type span,
 #single-serie .additional-info .price span,
 #single-serie .additional-info .sale-date span {
