@@ -7,6 +7,28 @@
   display: flex;
 }
 
+.btn {
+  display: block;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+  background-color: #0282f9;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  padding: 0.5rem 1.5rem;
+  margin: 0 1rem;
+  cursor: pointer;
+}
+.btn.btn-back {
+  background-color: #cfb42d;
+}
+.btn.btn-reset {
+  background-color: #b80202;
+}
+.btn.btn-add {
+  background-color: #0b6b0b;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -198,19 +220,9 @@ a {
   display: flex;
 }
 #current-series .cta-btn .btn {
-  display: block;
-  font-weight: bold;
-  text-transform: uppercase;
-  color: white;
-  background-color: #0282f9;
-  border: 2px solid #0282f9;
+  border-radius: 0;
   padding: 0.5rem 3.5rem;
   margin: 4rem auto 0;
-  cursor: pointer;
-}
-#current-series .cta-btn .btn.btn-add {
-  background-color: #0b6b0b;
-  border: 2px solid #0b6b0b;
 }
 
 #main-banner {
@@ -462,25 +474,4 @@ a {
 #add-comic .form-cta > div {
   display: flex;
   align-items: center;
-}
-#add-comic .form-cta .btn {
-  display: block;
-  font-weight: bold;
-  text-transform: uppercase;
-  color: white;
-  background-color: #0282f9;
-  border: 1px solid transparent;
-  border-radius: 10px;
-  padding: 0.5rem 1.5rem;
-  margin: 0 1rem;
-  cursor: pointer;
-}
-#add-comic .form-cta .btn.btn-back {
-  background-color: #0282f9;
-}
-#add-comic .form-cta .btn.btn-reset {
-  background-color: #b80202;
-}
-#add-comic .form-cta .btn.btn-add {
-  background-color: #0b6b0b;
 }

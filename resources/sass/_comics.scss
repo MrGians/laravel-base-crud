@@ -50,20 +50,9 @@
         display: flex;
 
         .btn {
-            display: block;
-            font-weight: bold;
-            text-transform: uppercase;
-            color: white;
-            background-color: $primary;
-            border: 2px solid $primary;
+            border-radius: 0;
             padding: 0.5rem 3.5rem;
             margin: 4rem auto 0;
-            cursor: pointer;
-
-            &.btn-add {
-                background-color: #0b6b0b;
-                border: 2px solid #0b6b0b;
-            }
         }
     }
 }
