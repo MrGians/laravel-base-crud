@@ -1,0 +1,205 @@
+// # Single Comic page [subpage of Comics]
+#single-serie {
+    background-color: $primary;
+    padding-top: 4rem;
+
+    .serie-info {
+        background-color: white;
+
+        .row {
+            position: relative;
+            padding: 3.5rem 0;
+
+            .col:first-child {
+                flex-grow: 1;
+                padding-right: 3rem;
+
+                .comic-cover {
+                    height: 200px;
+                    position: absolute;
+                    left: 0;
+                    bottom: 105%;
+                    border: 1px solid white;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+
+                    .top-label,
+                    .bottom-label {
+                        position: absolute;
+                        left: 0;
+                        padding: 0 5px;
+                        text-transform: uppercase;
+                        color: white;
+                        background-color: $gallery-label;
+                        font-size: 0.6rem;
+                    }
+                    .top-label {
+                        top: 0;
+                    }
+
+                    .bottom-label {
+                        right: 0;
+                        bottom: 0;
+                        text-align: center;
+                    }
+                }
+
+                h2 {
+                    text-transform: uppercase;
+                    font-size: 1.3rem;
+                    color: $secondary;
+                }
+
+                .buy-info {
+                    width: 100%;
+                    height: 40px;
+                    @include flex_center("cross");
+                    justify-content: space-between;
+                    background-color: $buy-info-label;
+                    color: $tertiary;
+                    border-bottom: 1px solid black;
+                    margin: 1rem 0;
+
+                    & > div:first-of-type {
+                        flex-grow: 1;
+                        @include flex_center("cross");
+                        justify-content: space-between;
+                        padding: 0 1rem;
+
+                        .price {
+                            color: white;
+                        }
+                        .available {
+                            text-transform: uppercase;
+                            text-align: right;
+                            color: white;
+                        }
+                    }
+                    .check {
+                        flex-grow: 0;
+                        height: 100%;
+                        border-left: 1px solid black;
+                        @include flex_center("cross");
+
+                        a {
+                            color: white;
+                            padding: 0 1rem;
+                        }
+                    }
+                }
+            }
+
+            .col:last-child {
+                h5 {
+                    text-transform: uppercase;
+                    color: $tertiary;
+                    text-align: right;
+                    font-weight: bold;
+                }
+
+                .adv {
+                    img {
+                        max-width: 250px;
+                        min-width: 250px;
+                    }
+                }
+            }
+        }
+    }
+
+    .additional-info {
+        background-color: #f6f6f6;
+        padding-bottom: 6rem;
+
+        .row {
+            justify-content: space-between;
+            padding: 1.5rem 0;
+
+            .col {
+                width: 100%;
+            }
+        }
+
+        .talent h4,
+        .specs h4 {
+            margin-bottom: 1rem;
+        }
+
+        .artist,
+        .writers,
+        .type,
+        .price,
+        .sale-date {
+            display: flex;
+            padding: 0.5rem 0;
+
+            h6 {
+                flex-shrink: 0;
+                &:first-child {
+                    width: 35%;
+                }
+            }
+            p {
+                line-height: 0.8rem;
+            }
+            span {
+                color: $primary;
+                font-size: 0.7rem;
+            }
+        }
+
+        .type > span {
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+    }
+}
+
+// # Comic Banner
+#comic-banner {
+    background-color: #f6f6f6;
+    border-top: 1px solid $light-grey;
+
+    .col {
+        width: 25%;
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem;
+        border-left: 1px solid $light-grey;
+        border-right: 1px solid $light-grey;
+
+        figure {
+            position: relative;
+            height: 37px;
+            width: 37px;
+            overflow: hidden;
+
+            img {
+                position: absolute;
+                top: 0;
+
+                &.digital {
+                    right: -111px;
+                }
+                &.shop {
+                    right: 0px;
+                }
+                &.locator {
+                    right: -37px;
+                }
+                &.subscribe {
+                    right: -74px;
+                }
+            }
+        }
+        span {
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 0.6rem;
+            color: #aea8a3;
+        }
+    }
+}

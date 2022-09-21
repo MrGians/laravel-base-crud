@@ -1,0 +1,36 @@
+#navbar {
+    @include flex_center("cross");
+    justify-content: space-between;
+    height: 70px;
+
+    img {
+        display: block;
+        width: 50px;
+    }
+
+    ul {
+        @include flex_center("cross");
+        height: 100%;
+
+        li {
+            height: 100%;
+            @include flex_center("cross");
+
+            a {
+                display: inline-block;
+                font-size: 0.6rem;
+                font-weight: 700;
+                color: $secondary;
+                text-transform: uppercase;
+                padding: calc(35px + 2px - 0.6rem) 0.8rem;
+                border-bottom: 2px solid transparent;
+
+                &:hover,
+                &.active {
+                    color: $primary;
+                    border-bottom: 2px solid $primary;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,105 @@
+// | Footer Top
+#footer-top {
+    background-image: url("../img/footer-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .row {
+        justify-content: space-between;
+
+        .col {
+            padding-right: 2rem;
+
+            .copy {
+                padding: 0 1.2rem;
+                padding-bottom: 1rem;
+
+                & p {
+                    font-size: 0.55rem;
+                    color: #adadad;
+
+                    & a {
+                        color: $primary;
+                    }
+                }
+            }
+            .row.links {
+                padding: 1.2rem;
+
+                h4 {
+                    color: white;
+                    text-transform: uppercase;
+                }
+
+                ul {
+                    margin-bottom: 0.5rem;
+
+                    li {
+                        line-height: 0.8rem;
+
+                        a {
+                            font-size: 0.55rem;
+                            color: #adadad;
+                        }
+                    }
+                }
+            }
+        }
+
+        .col.logo {
+            width: 500px;
+            height: 300px;
+            overflow: hidden;
+
+            img {
+                display: block;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+// | Footer Bottom
+#footer-bottom {
+    background-color: $tertiary;
+
+    .row {
+        @include flex_center("cross");
+
+        justify-content: space-between;
+
+        .col .btn {
+            display: inline-block;
+            text-transform: uppercase;
+            color: white;
+            padding: 0.5rem 0.8rem;
+            border: 2px solid $primary;
+            margin: 1.5rem 0;
+        }
+
+        .col.social-links {
+            display: flex;
+
+            & > * {
+                padding: 0.5rem;
+            }
+            h4 {
+                text-transform: uppercase;
+                color: $primary;
+            }
+            a {
+                display: inline-block;
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+}

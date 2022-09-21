@@ -1,0 +1,13 @@
+// # Flex
+@mixin flex_center($axis: "both") {
+    display: flex;
+
+    @if $axis == "main" {
+        justify-content: center;
+    } @else if $axis == "cross" {
+        align-items: center;
+    } @else if $axis == "both" {
+        justify-content: center;
+        align-items: center;
+    }
+}
