@@ -14,66 +14,32 @@ use Illuminate\Support\Facades\Route;
 */
 
 // Characters (Homepage)
-Route::get('/', function () {
-    return view('characters');
-})->name('characters');
+Route::get('/', 'PageController@characters')->name('characters');
 
-// Comics
-Route::get('/comics', function () {
-    $comics = config('data.comics');
-    $main_banner_items = config('data.main-banner-items');
-    return view('comics.index', compact('comics', 'main_banner_items'));
-})->name('comics.index');
-
-
-    // | Subpage of Comics page
-    Route::get('/comics/{id}', function ($id) {
-        $comics = config('data.comics');
-        $comic = $comics[$id];
-        $comic_banner_items = config('data.comic-banner-items');
-
-        return view('comics.show', compact('comic', 'comic_banner_items'));
-    })->name('comics.show');
-
-
+// Comics - CRUD Routes
+Route::resource('comics', 'ComicController');
 
 // Movies
-Route::get('/movies', function () {
-    return view('movies');
-})->name('movies');
+Route::get('/movies', 'PageController@movies')->name('movies');
 
 // TV
-Route::get('/tv', function () {
-    return view('tv');
-})->name('tv');
+Route::get('/tv', 'PageController@tv')->name('tv');
 
 // Games
-Route::get('/games', function () {
-    return view('games');
-})->name('games');
+Route::get('/games', 'PageController@games')->name('games');
 
 // Collectibles
-Route::get('/collectibles', function () {
-    return view('collectibles');
-})->name('collectibles');
+Route::get('/collectibles', 'PageController@collectibles')->name('collectibles');
 
 // Videos
-Route::get('/videos', function () {
-    return view('videos');
-})->name('videos');
+Route::get('/videos', 'PageController@videos')->name('videos');
 
 // Fans
-Route::get('/fans', function () {
-    return view('fans');
-})->name('fans');
+Route::get('/fans', 'PageController@fans')->name('fans');
 
 // News
-Route::get('/news', function () {
-    return view('news');
-})->name('news');
+Route::get('/news', 'PageController@news')->name('news');
 
 // Shop
-Route::get('/shop', function () {
-    return view('shop');
-})->name('shop');
+Route::get('/shop', 'PageController@shop')->name('shop');
 
