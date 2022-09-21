@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Comic;
 use Illuminate\Http\Request;
 
 class PageController extends Controller
@@ -15,7 +16,7 @@ class PageController extends Controller
     // Comics page
     public function comics()
     {
-        $comics = config('data.comics');
+        $comics = Comic::all();
         $main_banner_items = config('data.main-banner-items');
         return view('comics.index', compact('comics', 'main_banner_items'));
     }
