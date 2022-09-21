@@ -38,7 +38,7 @@
           <div class="col">
             <h5>Advertisement</h5>
             <figure class="adv">
-              <img src="{{asset('img/adv.jpg')}}" alt="{{ $comic->series }}">
+              <img src="{{asset('img/advertisement.jpg')}}" alt="{{ $comic->series }}">
             </figure>
           </div>
         </div>
