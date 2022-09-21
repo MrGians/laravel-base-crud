@@ -18,8 +18,11 @@
         </div>
         @endforeach
       </div>
-      <!-- Load More Button -->
-      <button class="btn">Load More</button>
+      <!-- CTA Button -->
+      <div class="cta-btn">
+        <a href="#" class="btn">Load More</a>
+        <a href="{{ route('comics.create') }}" class="btn btn-add">Add New Comic</a>
+      </div>
     </div>
   </section>
 
