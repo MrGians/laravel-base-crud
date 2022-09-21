@@ -441,6 +441,7 @@ a {
   padding-bottom: 0.5rem;
 }
 #add-comic .row .col .input-box input,
+#add-comic .row .col .input-box select,
 #add-comic .row .col .input-box textarea {
   border: 2px solid #0282f9;
   border-radius: 10px;

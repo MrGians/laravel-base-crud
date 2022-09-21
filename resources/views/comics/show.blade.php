@@ -22,7 +22,7 @@
             <div class="buy-info">
               <div>
                 <!-- Price -->
-                <span class="price">U.S. Price: <strong>{{ $comic->price }}</strong></span>
+                <span class="price">U.S. Price: <strong>£{{ $comic->price }}</strong></span>
                 <!-- Availability -->
                 <span class="available">Available</span>
               </div>

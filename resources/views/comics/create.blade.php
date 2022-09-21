@@ -35,7 +35,10 @@
           {{-- Type Input --}}
           <div class="input-box">
             <label for="type">Tipologia Fumetto</label>
-            <input type="text" id="type" name="type" placeholder="Inserisci il tipo di Fumetto">
+            <select name="type" id="type">
+              <option value="comic book">Comic book</option>
+              <option value="graphic novel">Graphic novel</option>
+            </select>
           </div>
           {{-- Sale Date Input --}}
           <div class="input-box">
