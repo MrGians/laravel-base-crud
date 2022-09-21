@@ -9,10 +9,10 @@
       <div class="row">
         @foreach ($comics as $serie)
         <div class="col card">
-          <a href="{{ route('comics.show', ['id' => $loop->index]) }}">
+          <a href="{{ route('comics.show', $serie->id) }}">
             <figure>
-              <img src="{{ $serie['thumb'] }}" alt="{{ $serie['series'] }}" />
-              <figcaption>{{ $serie['series'] }}</figcaption>
+              <img src="{{ $serie->thumb }}" alt="{{ $serie->series }}" />
+              <figcaption>{{ $serie->series }}</figcaption>
             </figure>
           </a>
         </div>

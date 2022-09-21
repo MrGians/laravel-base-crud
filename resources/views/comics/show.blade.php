@@ -12,17 +12,17 @@
           <div class="col">
             <!-- Comic Cover -->
             <figure class="comic-cover">
-              <span class="top-label">{{ $comic['type'] }}</span>
-              <img src="{{ $comic['thumb'] }}" alt="{{ $comic['series'] }}">
+              <span class="top-label">{{ $comic->type }}</span>
+              <img src="{{ $comic->thumb }}" alt="{{ $comic->series }}">
               <span class="bottom-label">View Gallery</span>
             </figure>
             <!-- Title -->
-            <h2>{{ $comic['title'] }}</h2>
+            <h2>{{ $comic->title }}</h2>
             <!-- Buy Information -->
             <div class="buy-info">
               <div>
                 <!-- Price -->
-                <span class="price">U.S. Price: <strong>{{ $comic['price'] }}</strong></span>
+                <span class="price">U.S. Price: <strong>{{ $comic->price }}</strong></span>
                 <!-- Availability -->
                 <span class="available">Available</span>
               </div>
@@ -32,13 +32,13 @@
               </div>
             </div>
             <!-- Description -->
-            <p>{{ $comic['description'] }}</p>
+            <p>{{ $comic->description }}</p>
           </div>
           <!-- Advertisement // TODO fix -->
           <div class="col">
             <h5>Advertisement</h5>
             <figure class="adv">
-              <img src="{{asset('img/adv.jpg')}}" alt="{{ $comic['series'] }}">
+              <img src="{{asset('img/adv.jpg')}}" alt="{{ $comic->series }}">
             </figure>
           </div>
         </div>
@@ -57,19 +57,19 @@
             <!-- Serie type -->
             <div class="type">
               <h6>Series:</h6>
-              <span>{{ $comic['series'] }}</span>
+              <span>{{ $comic->series }}</span>
             </div>
             <hr/>
             <!-- Serie price -->
             <div class="price">
               <h6>U.S. Price:</h6>
-              <h6>{{ $comic['price'] }}</h6>
+              <h6>£{{ $comic->price }}</h6>
             </div>
             <hr/>
             <!-- Serie sale date -->
             <div class="sale-date">
               <h6>On Sale Date:</h6>
-              <h6>{{ date('M d Y', strtotime($comic['sale_date'])) }}</h6>
+              <h6>{{ date('M d Y', strtotime($comic->sale_date)) }}</h6>
             </div>
             <hr/>
           </div>
