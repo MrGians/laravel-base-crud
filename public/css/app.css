@@ -35,6 +35,27 @@
   background-color: #b80202;
 }
 
+.alert {
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 1.8rem;
+  font-weight: bold;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+}
+.alert.alert-danger {
+  background-color: rgba(184, 2, 2, 0.9019607843);
+}
+.alert.alert-info {
+  background-color: rgba(0, 89, 172, 0.9019607843);
+}
+.alert.alert-success {
+  background-color: rgba(11, 107, 11, 0.9019607843);
+}
+
 * {
   margin: 0;
   padding: 0;

@@ -1,6 +1,8 @@
 @extends('layouts.main')
 
 @section('main-content')
+<!-- Alert -->
+@include('includes.alert')
 
 <!-- Single Serie -->
 <section id="single-serie">

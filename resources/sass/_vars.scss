@@ -5,11 +5,19 @@ $light-grey: #d8d8d8;
 $primary: #0282f9;
 $secondary: #1c1c1c;
 $tertiary: #303030;
+
+// | Label
 $gallery-label: #00a9d9;
 $buy-info-label: #55ba59;
 
+// | Button
 $btn-back: #616161;
 $btn-reset: #cc4303;
 $btn-add: #0b6b0b;
 $btn-del: #b80202;
 $btn-edit: #cfb42d;
+
+// | CRUD Actions Message
+$alert-success: #0b6b0be6;
+$alert-danger: #b80202e6;
+$alert-info: #0059ace6;

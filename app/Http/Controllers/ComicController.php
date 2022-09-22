@@ -42,7 +42,7 @@ class ComicController extends Controller
         $new_comic->fill($data);
         $new_comic->save();
 
-        return redirect()->route('comics.show', $new_comic);
+        return redirect()->route('comics.show', $new_comic)->with('message', "Il fumetto è stato Creato con successo")->with('type', 'success');;
     }
 
     /**
@@ -86,7 +86,7 @@ class ComicController extends Controller
         $comic->fill($data);
         $comic->save();
 
-        return redirect()->route('comics.show', $comic->id);
+        return redirect()->route('comics.show', $comic->id)->with('message', "Il fumetto è stato Modificato con successo")->with('type', 'success');;
 
     }
 
@@ -101,6 +101,6 @@ class ComicController extends Controller
         $comic = Comic::findOrFail($id);
         $comic->delete();
 
-        return redirect()->route('comics.index');
+        return redirect()->route('comics.index')->with('message', "Il fumetto è stato Eliminato con successo")->with('type', 'success');
     }
 }

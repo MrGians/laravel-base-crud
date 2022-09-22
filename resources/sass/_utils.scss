@@ -40,3 +40,26 @@
         background-color: $btn-del;
     }
 }
+
+// | Alert
+.alert {
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 1.8rem;
+    font-weight: bold;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+
+    &.alert-danger {
+        background-color: $alert-danger;
+    }
+    &.alert-info {
+        background-color: $alert-info;
+    }
+    &.alert-success {
+        background-color: $alert-success;
+    }
+}
