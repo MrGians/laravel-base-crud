@@ -125,6 +125,7 @@
                 &:last-child {
                     display: flex;
                     justify-content: space-between;
+                    padding: 2rem 0;
                 }
             }
         }
@@ -160,8 +161,17 @@
         }
 
         .btn {
-            margin: 2rem auto;
             width: fit-content;
+            margin: 0;
+        }
+        .btn-group {
+            display: flex;
+
+            button {
+                height: 100%;
+                font-size: 1em;
+                margin-right: 1rem;
+            }
         }
     }
 }
