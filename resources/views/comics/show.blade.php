@@ -77,7 +77,7 @@
         <!-- Go Back Button -->
         <div class="col">
           <a class="btn btn-back" href="{{ route('comics.index') }}">Torna indietro</a>
-          <form method="{{ route('comics.destroy', $comic->id) }}" action="POST">
+          <form method="POST" action="{{ route('comics.destroy', $comic->id) }}">
             @csrf
             @method('DELETE')
             <button type="submit" class="btn btn-del">Cancella</button>
