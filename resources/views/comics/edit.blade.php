@@ -6,7 +6,7 @@
   <div class="container">
 
     <h2>Modifica Fumetto</h2>
-    <form action="{{ route('comics.update') }}" method="POST">
+    <form action="{{ route('comics.update', $comic->id) }}" method="POST">
       @csrf
       @method('PUT')
       <div class="row">
