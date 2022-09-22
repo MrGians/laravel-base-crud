@@ -21,5 +21,7 @@
   </main>
   <!-- Footer -->
   @include('includes.footer')
+
+  @yield('add-js')
 </body>
 </html>

@@ -80,7 +80,7 @@
         <div class="col">
           <a class="btn btn-back" href="{{ route('comics.index') }}">Torna indietro</a>
           <div class="btn-group">
-            <form method="POST" action="{{ route('comics.destroy', $comic->id) }}">
+            <form method="POST" action="{{ route('comics.destroy', $comic->id) }}" class="form-delete">
               @csrf
               @method('DELETE')
               <button type="submit" class="btn btn-del">Cancella</button>
@@ -109,4 +109,8 @@
     </div>
   </section>
 
+@endsection
+
+@section('add-js')
+    <script type="text/javascript" src="{{ asset('js/deleteMessage.js') }}"></script>
 @endsection
