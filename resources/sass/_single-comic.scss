@@ -121,6 +121,11 @@
 
             .col {
                 width: 100%;
+
+                &:last-child {
+                    display: flex;
+                    justify-content: space-between;
+                }
             }
         }
 

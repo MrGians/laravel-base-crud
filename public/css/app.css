@@ -352,6 +352,10 @@ a {
 #single-serie .additional-info .row .col {
   width: 100%;
 }
+#single-serie .additional-info .row .col:last-child {
+  display: flex;
+  justify-content: space-between;
+}
 #single-serie .additional-info .specs h4 {
   margin-bottom: 1rem;
 }
