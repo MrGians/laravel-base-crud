@@ -77,6 +77,10 @@
         <!-- Go Back Button -->
         <div class="col">
           <a class="btn btn-back" href="{{ route('comics.index') }}">Torna indietro</a>
+          <form action="{{ route('comics.edit', $comic->id) }}" method="POST">
+            @csrf
+            <button class="btn btn-edit" type="submit">Modifica</button>
+          </form>
         </div>
       </div>
     </div>
