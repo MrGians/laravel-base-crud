@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Comic;
 use Illuminate\Http\Request;
+use Illuminate\Validation\Rule;
 
 class ComicController extends Controller
 {
@@ -39,6 +40,30 @@ class ComicController extends Controller
     public function store(Request $request)
     {
         $data = $request->all();
+        $request->validate([
+            'title' => ['required', 'string', 'max:255', 'unique:comics'],
+            'thumb' => 'required|string',
+            'description' => 'required|string',
+            'series' => 'required|string|',
+            'type' => 'required|string',
+            'sale_date' => 'required|date',
+            'price' => 'required|numeric|min:0.01'
+        ], [
+            'title.required' => "Il campo <strong>'Titolo'</strong> è obbligatorio",
+            'title.unique' => "Il titolo <strong>'$request->title'</strong> esiste già",
+            'title.max' => "Il titolo <strong>'$request->title'</strong> supera i :max caratteri",
+            'thumb.required' => "La <strong>'Copertina'</strong> è obbligatoria",
+            'description.required' => "Il campo <strong>'Descrizione'</strong> è obbligatorio",
+            'series.required' => "Il campo <strong>'Serie'</strong> è obbligatorio",
+            'type.required' => "Il campo <strong>'Tipologia Fumetto'</strong> è obbligatorio",
+            'sale_date.required' => "Il campo <strong>'Data di Vendita'</strong> è obbligatorio",
+            'sale_date.date' => "Il campo <strong>'Data di Vendita'</strong> deve essere una data",
+            'price.required' => "Il campo <strong>'Prezzo'</strong> è obbligatorio",
+            'price.min' => "Il prezzo inserito <strong>'$request->price'</strong> è minore di :min",
+            'price.numeric' => "Il campo <strong>'Prezzo'</strong> deve essere un numero",
+        ]);
+
+
         $new_comic = new Comic;
         $new_comic->fill($data);
         $new_comic->save();
@@ -83,6 +108,28 @@ class ComicController extends Controller
     {
         $comic = Comic::findOrFail($id);
         $data = $request->all();
+        $request->validate([
+            'title' => ['required', 'string', 'max:255', Rule::unique('comics')->ignore($id)],
+            'thumb' => 'required|string',
+            'description' => 'required|string',
+            'series' => 'required|string|',
+            'type' => 'required|string',
+            'sale_date' => 'required|date',
+            'price' => 'required|numeric|min:0.01'
+        ], [
+            'title.required' => "Il campo <strong>'Titolo'</strong> è obbligatorio",
+            'title.unique' => "Il titolo <strong>'$request->title'</strong> esiste già",
+            'title.max' => "Il titolo <strong>'$request->title'</strong> supera i :max caratteri",
+            'thumb.required' => "La <strong>'Copertina'</strong> è obbligatoria",
+            'description.required' => "Il campo <strong>'Descrizione'</strong> è obbligatorio",
+            'series.required' => "Il campo <strong>'Serie'</strong> è obbligatorio",
+            'type.required' => "Il campo <strong>'Tipologia Fumetto'</strong> è obbligatorio",
+            'sale_date.required' => "Il campo <strong>'Data di Vendita'</strong> è obbligatorio",
+            'sale_date.date' => "Il campo <strong>'Data di Vendita'</strong> deve essere una data",
+            'price.required' => "Il campo <strong>'Prezzo'</strong> è obbligatorio",
+            'price.min' => "Il prezzo inserito <strong>'$request->price'</strong> è minore di :min",
+            'price.numeric' => "Il campo <strong>'Prezzo'</strong> deve essere un numero",
+        ]);
 
         $comic->fill($data);
         $comic->save();
