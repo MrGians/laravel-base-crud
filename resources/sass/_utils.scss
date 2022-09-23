@@ -63,3 +63,12 @@
         background-color: $alert-success;
     }
 }
+
+// | Errors
+.errors {
+    list-style-type: disc;
+    padding: 1rem 3rem;
+    border-radius: 10px;
+    background-color: $alert-danger;
+    color: white;
+}

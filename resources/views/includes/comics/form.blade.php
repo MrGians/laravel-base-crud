@@ -1,4 +1,15 @@
+{{-- Errors Message --}}
+@if($errors->any())
+<div class="errors">
+  <ul>
+    @foreach ($errors->all() as $error)
+        <li>{!! $error !!}</li>
+    @endforeach
+  </ul>
+</div>
 
+@endif
+{{-- Form choice --}}
 @if ($comic->exists)
   <form action="{{ route('comics.update', $comic->id) }}" method="POST">
   @method('PUT')
@@ -12,24 +23,24 @@
           {{-- Title Input --}}
           <div class="input-box">
             <label for="title">Titolo</label>
-            <input type="text" id="title" name="title" placeholder="Inserisci il Titolo" value="{{ $comic->title }}">
+            <input type="text" id="title" name="title" placeholder="Inserisci il Titolo" value="{{ old('title', $comic->title) }}">
           </div>
           {{-- Thumbnail Input --}}
           <div class="input-box">
             <label for="thumb">Copertina / Cover</label>
-            <input type="text" id="thumb" name="thumb" placeholder="Inserisci la Copertina"  value="{{ $comic->thumb }}">
+            <input type="text" id="thumb" name="thumb" placeholder="Inserisci la Copertina"  value="{{ old('thumb', $comic->thumb) }}">
           </div>
           {{-- Description Input --}}
           <div class="input-box">
             <label for="description">Descrizione</label>
-            <textarea id="description" name="description" placeholder="Inserisci la Descrizione" rows="5">{{ $comic->description }}</textarea>
+            <textarea id="description" name="description" placeholder="Inserisci la Descrizione" rows="5">{{ old('description', $comic->description) }}</textarea>
           </div>
         </div>
         <div class="col">
           {{-- Series Input --}}
           <div class="input-box">
             <label for="series">Serie</label>
-            <input type="text" id="series" name="series" placeholder="Inserisci la Serie" value="{{ $comic->series }}">
+            <input type="text" id="series" name="series" placeholder="Inserisci la Serie" value="{{ old('series', $comic->series) }}">
           </div>
           {{-- Type Input --}}
           <div class="input-box">
@@ -42,12 +53,12 @@
           {{-- Sale Date Input --}}
           <div class="input-box">
             <label for="sale-date">Data di Vendita</label>
-            <input type="date" id="sale-date" name="sale_date" placeholder="Inserisci la data di vendita"  value="{{ $comic->sale_date }}">
+            <input type="date" id="sale-date" name="sale_date" placeholder="Inserisci la data di vendita"  value="{{ old('sale_date', $comic->sale_date) }}">
           </div>
           {{-- Price Input --}}
           <div class="input-box">
             <label for="price">Prezzo</label>
-            <input type="number" step="0.01" id="price" name="price" placeholder="Inserisci il Prezzo"  value="{{ $comic->price }}">
+            <input type="number" min="0.01" step="0.01" id="price" name="price" placeholder="Inserisci il Prezzo"  value="{{ old('price', $comic->price) }}">
           </div>
         </div>
       </div>
