@@ -56,6 +56,14 @@
   background-color: rgba(11, 107, 11, 0.9019607843);
 }
 
+.errors {
+  list-style-type: disc;
+  padding: 1rem 3rem;
+  border-radius: 10px;
+  background-color: rgba(184, 2, 2, 0.9019607843);
+  color: white;
+}
+
 * {
   margin: 0;
   padding: 0;
